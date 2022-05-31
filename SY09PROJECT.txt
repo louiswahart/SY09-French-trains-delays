@@ -1,0 +1,78 @@
+full_trains:
+
+
+variables:
+['year', 'month', 'service', 'departure_station', 'arrival_station',
+
+'journey_time_avg', 'total_num_trips', 'num_of_canceled_trains',
+
+'comment_cancellations', 'num_late_at_departure',
+
+'avg_delay_late_at_departure', 'avg_delay_all_departing',
+
+'comment_delays_at_departure', 'num_arriving_late',
+
+'avg_delay_late_on_arrival', 'avg_delay_all_arriving',
+
+'comment_delays_on_arrival', 'delay_cause_external_cause',
+
+'delay_cause_rail_infrastructure', 'delay_cause_traffic_management',
+
+'delay_cause_rolling_stock', 'delay_cause_station_management',
+
+'delay_cause_travelers', 'num_greater_15_min_late',
+
+'avg_delay_late_greater_15_min', 'num_greater_30_min_late',
+
+'num_greater_60_min_late']
+
+pistes:
+
+ACP: 
+
+
+K-Means: arriver à retrouver des groupes comme: le trajet (il faudrait ajouter une colonne avec départ-destination), 
+
+
+corrélation entre type de cause de retard et temps de retard
+
+gares de départ(/arrivée) en lien avec la proportion de train annulés/en retard
+k means avec n components=nombre de gares de départ, paramètres à prendre en compte: 
+
+
+gare de départ: région occitanie
+Kmeans pour retrouver les gares de départ: difficile de retrouver des gares, même avec temps de trajets
+
+
+gares de départ: régions NA, O, PACA
+comparer les régions entre elles ? (retard moyen au départ pour les régions de départ)
+
+vacances? y a t'il plus de trains qui circulent à certaines periodes ?
+
+
+% trains en retard pour causes externes (météo, obstacles, colis suspects, malveillance, mouvements sociaux, etc.);
+% trains en retard à cause infrastructure ferroviaire (maintenance, travaux);
+% trains en retard à cause gestion trafic (circulation sur ligne ferroviaire, interactions réseaux);
+% trains en retard à cause matériel roulant;
+% trains en retard à cause gestion en gare et réutilisation de matériel
+;% trains en retard à cause prise en compte voyageurs (affluence, gestions PSH, correspondances);
+Nombre trains en retard > 15min;
+Retard moyen trains en retard > 15min;
+Nombre trains en retard > 30min;
+Nombre trains en retard > 60min;
+Période;
+Retard pour causes externes;
+Retard à cause infrastructure ferroviaire;
+Retard à cause gestion trafic;Retard à cause matériel roulant;
+Retard à cause gestion en gare et réutilisation de matériel;
+Retard à cause prise en compte voyageurs
+
+
+faire les kmeans sur le groupby year month: arriver à retrouver le mois de l'année à partir du trajet (dont on prend le pct d'annulation, )
+
+faire régression linéaire pour le lien entre les mois avec bcp de journées de grève et les pourcentages de trains en retard
+
+Région PACA:
+
+
+
