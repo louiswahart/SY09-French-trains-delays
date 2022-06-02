@@ -75,4 +75,4 @@ faire régression linéaire pour le lien entre les mois avec bcp de journées de
 Région PACA:
 
 
-
+calculer correlation entre greves et cancel (et retard) et comparer celle ci par région, pour voir si des régions ont bien tenu pendant la grève et si d'autres ont vraiment été plus affectées
